@@ -8,7 +8,7 @@ import RemoteJob from "./Components/RemoteJob";
 
 function App() {
   return (
-    <div className="h-screen w-screen bg-black text-white">
+    <div className="h-full min-h-screen px-10 py-3 w-screen bg-black text-white">
       <Navbar />
       <Routes>
         <Route path="/" element={<Landing />} />

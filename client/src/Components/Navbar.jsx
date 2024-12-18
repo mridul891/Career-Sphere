@@ -5,12 +5,12 @@ import { SidebarTrigger } from "./ui/sidebar";
 
 const Navbar = () => {
   return (
-    <div className="lg:max-h-15 border-b border-gray-100 lg:max-w-screen flex items-center justify-between px-5 py-4">
+    <div className="lg:max-h-15 border-b border-gray-400 lg:max-w-screen flex items-center justify-between px-5 py-4">
       {/* Logo */}
       <div>
         <Link to="/">
           <h1 className="text-2xl font-bold md:text-xl lg:text-3xl md:font-bold">
-            Career Sphere
+            CareerSphere
           </h1>
         </Link>
       </div>
