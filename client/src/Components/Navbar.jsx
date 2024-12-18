@@ -9,7 +9,7 @@ const Navbar = () => {
       {/* Logo */}
       <div>
         <Link to="/">
-          <h1 className="text-2xl font-bold md:text-xl lg:text-3xl md:font-bold">
+          <h1 className="text-2\xl font-bold md:text-xl lg:text-3xl md:font-bold">
             CareerSphere
           </h1>
         </Link>
@@ -28,7 +28,7 @@ const Navbar = () => {
       </div>
 
       {/* Navigation Links (Visible on larger screens) */}
-      <div className="hidden md:flex gap-10 lg:text-2xl">
+      <div className="hidden md:flex gap-10 lg:text-lg">
         <Link to="/remote">
           <h1>Remote Jobs</h1>
         </Link>
