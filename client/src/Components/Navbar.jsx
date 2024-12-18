@@ -8,9 +8,11 @@ const Navbar = () => {
     <div className="lg:max-h-15 border-b border-gray-100 lg:max-w-screen flex items-center justify-between px-5 py-4">
       {/* Logo */}
       <div>
-        <h1 className="text-2xl font-bold md:text-xl lg:text-3xl md:font-bold">
-          Career Sphere
-        </h1>
+        <Link to="/">
+          <h1 className="text-2xl font-bold md:text-xl lg:text-3xl md:font-bold">
+            Career Sphere
+          </h1>
+        </Link>
       </div>
 
       {/* Search Bar (Visible on larger screens) */}
