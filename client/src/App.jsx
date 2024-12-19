@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar";
 import About from "./Components/About";
 import Blog from "./Components/Blog";
 import RemoteJob from "./Components/RemoteJob";
+import Details from "./Components/Details";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/remote" element={<RemoteJob />} />
+        <Route path="/job/:slug" element={<Details />} />
       </Routes>
     </div>
   );
