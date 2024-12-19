@@ -9,7 +9,7 @@ import Details from "./Components/Details";
 
 function App() {
   return (
-    <div className="h-full min-h-screen px-10 py-3 w-screen bg-black text-white">
+    <div className="h-full min-h-screen px-10 py-3 w-screen bg-[#1e1d1d] text-white">
       <Navbar />
       <Routes>
         <Route path="/" element={<Landing />} />

@@ -23,7 +23,7 @@ const Navbar = () => {
         <input
           type="text"
           placeholder="Search Jobs"
-          className="outline-none bg-black"
+          className="outline-none bg-transparent"
         />
       </div>
 

@@ -93,11 +93,12 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.job-description h2 {
+.job-description h2 ,h3,h4,h5,h6 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
   padding-bottom: 0.25rem;
+  color: white;
 }
 
 .job-description p {
@@ -105,20 +106,25 @@ body {
   line-height: 1.8;
   font-size: 1rem;
   color: rgb(211, 208, 208);
+
 }
 
 .job-description ul {
   margin: 1rem 0;
   padding-left: 2rem;
   list-style-type: disc;
+  color: white;
 }
 
 .job-description li {
   margin-bottom: 0.75rem;
   font-size: 1rem;
   line-height: 1.6;
+  color: white;
+
 }
 
 .job-description strong {
   font-weight: 600;
+  color: white;
 }
