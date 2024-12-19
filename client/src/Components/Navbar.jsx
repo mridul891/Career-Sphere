@@ -32,11 +32,11 @@ const Navbar = () => {
         <Link to="/remote">
           <h1>Remote Jobs</h1>
         </Link>
-        <Link to="/blog">
-          <h1>Blog</h1>
-        </Link>
         <Link to="/about">
           <h1>About</h1>
+        </Link>
+        <Link to="/login">
+          <h1>Login</h1>
         </Link>
       </div>
 
