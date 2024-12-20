@@ -1,5 +1,3 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
-
 import {
   Sidebar,
   SidebarContent,
@@ -37,14 +35,18 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent className="bg-black text-white">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-white text-2xl font-bold my-10">CareerSphere</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-white text-2xl font-bold my-10">
+            <Link to="/">CareerSphere</Link>
+          </SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu >
+            <SidebarMenu>
               {items.map((item) => (
-                <SidebarMenuItem key={item.title} >
+                <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <Link to={item.url}>
-                      <span className="text-xl font-semibold">{item.title}</span>
+                      <span className="text-xl font-semibold">
+                        {item.title}
+                      </span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

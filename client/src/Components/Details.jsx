@@ -20,8 +20,8 @@ const Details = () => {
     setDate(formattedDate);
   }, []);
   return (
-    <div className=" flex flex-1 justify-center items-center mt-[4rem]">
-      <div className="w-[70vw] text-justify job-description">
+    <div className="  flex flex-1 justify-center items-center mt-[4rem]">
+      <div className=" w-full lg:w-[70vw] text-justify job-description">
         {date}
         <h1 className="text-3xl font-semibold mb-5">{state.title}</h1>
 

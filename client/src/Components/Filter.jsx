@@ -1,43 +1,128 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Domain from "./Domain";
-import Experience from "./Experience";
+import { useState } from "react";
 
-export function FilterComponent() {
-  
+export function FilterComponent({ onSendData }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [activeFilters, setActiveFilters] = useState([
+    { type: "experience", value: [] },
+    { type: "domain", value: [] },
+    { type: "jobtype", value: [] },
+  ]);
+
+  const filterProducts = [
+    {
+      id: "jobtype",
+      name: "Job Type",
+      options: [
+        { value: "FullTime", label: "Full Time" },
+        { value: "Internship", label: "Internship" },
+        { value: "Remote", label: "Remote" },
+      ],
+    },
+    {
+      id: "experience",
+      name: "Experience",
+      options: [
+        { value: "0", label: "Freshers" },
+        { value: "1", label: "1 Year " },
+        { value: "2", label: "2 Year" },
+        { value: "3", label: "3 Year" },
+      ],
+    },
+    {
+      id: "domain",
+      name: "Domain",
+      options: [
+        { value: "Software Development", label: "Software Development" },
+        { value: "Frontend Development", label: "Frontend Development" },
+        { value: "Backend Development", label: "Backend Development" },
+        { value: "Full Stack Development", label: "Full Stack Development" },
+      ],
+    },
+  ];
+
+  const handleChange = (e) => {
+    if (e.target.checked) {
+      activeFilters.map((elem) => {
+        if (elem.type === e.target.id) {
+          elem.value = [...elem.value, e.target.value];
+        }
+      });
+    } else {
+      activeFilters.map((elem) => {
+        if (elem.type === e.target.id) {
+          elem.value = elem.value.filter((x) => x != e.target.value);
+        }
+      });
+    }
+    onSendData(activeFilters);
+  };
+
   return (
-    <Card className="w-[20rem] bg-black text-white">
-      <CardHeader>
-        <CardTitle>
-          <div className="flex justify-between items-center">
-            <span className="text-2xl font-bold">Filters</span>
-            <span className="text-xl font-semibold text-blue-500 cursor-pointer">
-              Clear All
-            </span>
-          </div>
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <form>
-          <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col gap-2 items-start justify-center">
-              <h1 className="text-2xl mb-2 font-bold">Job Type</h1>
-              <div className="flex gap-2">
-                <button className="flex items-center text-sm justify-center border border-gray-400 dark:border-gray-400 px-4 py-1.5 dark:bg-black-50 rounded-full">
-                  Full Time
-                </button>
-                <button className="flex items-center text-sm justify-center border px-4 py-1.5 rounded-full bg-green-110 dark:bg-green-110 text-white dark:text-white border-green-110 dark:border-green-110">
-                  Internship
+    <>
+      {/* Toggle Button for Mobile View */}
+      <button
+        className="fixed bottom-5 right-5 bg-blue-500 text-white p-3 rounded-full shadow-lg z-50 lg:hidden"
+        onClick={() => setIsOpen(true)}
+      >
+        Filters
+      </button>
+
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          onClick={() => setIsOpen(false)} // Clicking on overlay closes the drawer
+        ></div>
+      )}
+
+      {/* Filter Card */}
+      <div
+        className={`fixed bottom-0 left-0 w-full bg-black text-white z-50 p-5 transition-transform duration-300 ${
+          isOpen ? "translate-y-0" : "translate-y-full"
+        } lg:relative lg:translate-y-0 lg:w-[20rem]`}
+      >
+        <Card className="w-full bg-black text-white lg:w-[20vw] ">
+          <CardHeader>
+            <CardTitle>
+              <div className="flex justify-between items-center">
+                <span className="text-2xl font-bold">Filters</span>
+                {/* Close Button */}
+                <button
+                  className="text-xl font-semibold text-red-500 cursor-pointer lg:hidden"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Close
                 </button>
               </div>
-            </div>
-            <div className="flex flex-col space-y-1.5 text-white">
-              <Experience />
-            </div>
-            {/* select your domain */}
-            <Domain />
-          </div>
-        </form>
-      </CardContent>
-    </Card>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            {filterProducts.map((elem) => (
+              <div key={elem.id} className="mt-5">
+                <h1 className="text-xl font-semibold">{elem.name}</h1>
+                <ul>
+                  {elem.options.map((option, index) => (
+                    <div key={index} className="text-lg">
+                      <input
+                        type="checkbox"
+                        name={option.label}
+                        id={elem.id}
+                        onChange={handleChange}
+                        value={option.value}
+                      />
+                      <label htmlFor={option.label} className="ml-3">
+                        {option.label}
+                      </label>
+                    </div>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+      </div>
+    </>
   );
 }
