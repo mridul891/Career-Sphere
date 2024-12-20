@@ -1,26 +1,5 @@
 export const Apidata = [
   {
-    id: "cm4wrjqmn1a6107phpguei4k0",
-    title: "ACI Wroldwide is hiring for Intern Software Engineering | Pune",
-    slug: "aci-wroldwide-is-hiring-for-intern-software-engineering-or-pune-software-engineer",
-    companyImage: {
-      url: "https://ap-south-1.graphassets.com/clyfgge6609ki06o201991bwc/cm2g5kceq0lha07pi2fglgofg",
-    },
-    body: {
-      html: '\u003cp\u003eAs a Intern Software Engineer at ACI, you will play a vital role in developing robust product solutions that drive secure, seamless, and efficient payment experiences for businesses and consumers alike. As a team member of our engineering team, you will contribute your expertise to enhance our products and collaborate with cross-functional teams to deliver exceptional results.\u003c/p\u003e\u003cp\u003e\u003cu\u003eKey Responsibilities:\u003c/u\u003e\u003c/p\u003e\u003col\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eSoftware Development:\u003c/strong\u003e Design, develop, and maintain high-quality, scalable, and reliable software solutions that power our payment products. Write well-structured code that meets both functional and non-functional requirements.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eTechnical Expertise:\u003c/strong\u003e Leverage your deep understanding of software engineering principles, payment processing, and security protocols to contribute innovative ideas and solutions to complex technical challenges.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eFeature Enhancement: \u003c/strong\u003eCollaborate closely with product owners and managers to translate product requirements into technical designs and implementations. Enhance existing features and contribute to the development of new ones.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eCross-Functional Collaboration: \u003c/strong\u003eWork closely with QA engineers, product managers, and other stakeholders to ensure alignment on requirements and delivery timelines. Effectively communicate technical concepts to non-technical team members.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eTroubleshooting and Issue Resolution:\u003c/strong\u003e Investigate and diagnose software defects and incidents, collaborating with the team to prevent future occurrences.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eKnowledge Sharing: S\u003c/strong\u003eharing your expertise and best practices to foster their professional growth. Contribute to internal knowledge sharing initiatives.\u003c/div\u003e\u003c/li\u003e\u003c/ol\u003e\u003ch2\u003eAbout Us\u003c/h2\u003e\u003cp\u003e\u003ca rel="nofollow" target=\'_blank\' title="https://www.aciworldwide.com/" href="https://www.aciworldwide.com/"\u003eACI Worldwide\u003c/a\u003e is a global leader in mission-critical, \u003ca rel="nofollow" target=\'_blank\' title="https://www.aciworldwide.com/about-aci" href="https://www.aciworldwide.com/about-aci"\u003ereal-time payments software\u003c/a\u003e. Our proven, secure and scalable software solutions enable leading corporations, fintechs and financial disruptors to process and manage \u003ca rel="nofollow" target=\'_blank\' title="https://www.aciworldwide.com/solutions/aci-low-value-real-time-payments" href="https://www.aciworldwide.com/solutions/aci-low-value-real-time-payments"\u003edigital payments\u003c/a\u003e, power \u003ca rel="nofollow" target=\'_blank\' title="https://www.aciworldwide.com/solutions/aci-omni-commerce" href="https://www.aciworldwide.com/solutions/aci-omni-commerce"\u003eomni-commerce payments\u003c/a\u003e, present and process \u003ca rel="nofollow" target=\'_blank\' title="https://www.aciworldwide.com/solutions/aci-speedpay" href="https://www.aciworldwide.com/solutions/aci-speedpay"\u003ebill payments\u003c/a\u003e, and manage \u003ca rel="nofollow" target=\'_blank\' title="https://www.aciworldwide.com/solutions/aci-fraud-management-banking" href="https://www.aciworldwide.com/solutions/aci-fraud-management-banking"\u003efraud and risk\u003c/a\u003e. We combine our global footprint with a local presence to drive the \u003ca rel="nofollow" target=\'_blank\' title="https://www.aciworldwide.com/about-aci" href="https://www.aciworldwide.com/about-aci"\u003ereal-time digital transformation\u003c/a\u003e of payments and commerce.\u003c/p\u003e',
-    },
-    author: "admin",
-    salary: "2-5 LPA",
-    createdAt: "2024-12-20T13:05:27.689415+00:00",
-    skill: [],
-    experience: "0",
-    domain: "Software Engineer",
-    jobType: "Internship",
-
-    apply:
-      "https://ebwg.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/14957",
-  },
-  {
     id: "cm4wo16sf190d07pm799ef84w",
     title: "Sourcefit is hiring for Front-End Developer | Remote",
     slug: "sourcefit-is-hiring-for-front-end-developer-or-remote-frontend-development",
