@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-
-import ReactHtmlParser from "react-html-parser";
+import parse from "html-react-parser";
 
 const Details = () => {
   const [date, setDate] = useState("");
@@ -20,12 +19,12 @@ const Details = () => {
     setDate(formattedDate);
   }, []);
   return (
-    <div className="  flex flex-1 justify-center items-center mt-[4rem]">
-      <div className=" w-full lg:w-[70vw] text-justify job-description">
+    <div className="  flex w-full justify-center items-center mt-[4rem]">
+      <div className=" w-full  lg:w-[70vw] text-justify job-description">
         {date}
         <h1 className="text-3xl font-semibold mb-5">{state.title}</h1>
 
-        <div>{ReactHtmlParser(state.body.html)}</div>
+        <div>{parse(state.body.html)}</div>
 
         <div className="mt-6">
           <a href={state.apply} className="bg-blue-700 p-4 rounded-xl ">
