@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import SearchIcon from "../icons/SearchIcon";
+
 import { AppSidebar } from "./Sidebar";
 import { SidebarTrigger } from "./ui/sidebar";
 

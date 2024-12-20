@@ -1,6 +1,6 @@
 import CareerSphere from "./CareerSphere";
 import Info from "./Info";
-import { Aboutinfo } from "@/assets/data";
+import { Aboutinfo } from "../assets/data";
 const About = () => {
   return (
     <div className="mt-10 h-full flex justify-center items-center">

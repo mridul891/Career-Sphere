@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FilterComponent } from "./Filter";
 import Jobs from "./Jobs";
-import { Apidata } from "@/data";
+import { Apidata } from "../datas";
 
 const Landing = () => {
   const [filter, setFilters] = useState([]);
