@@ -4,11 +4,10 @@ import Jobs from "./Jobs";
 import { Apidata } from "../datas";
 
 const Landing = () => {
-  const [filter, setFilters] = useState([]);
+  const [filter, setFilters] = useState(null);
   const [data, setData] = useState(Apidata);
 
   const handleDataFromChild = (newFilter) => {
-    console.log(JSON.stringify(newFilter));
     setFilters(JSON.stringify(newFilter));
   };
 
