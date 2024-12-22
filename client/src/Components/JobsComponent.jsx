@@ -13,8 +13,8 @@ const JobsComponent = ({ job }) => {
       onClick={handleClick}
     >
       {/* image */}
-      <div className=" md:block w-[15rem] lg:w-[20rem] h-[10rem] overflow-hidden mr-3">
-        <img src={job.companyImage.url} alt="" className="" />
+      <div className="w-full lg:max-w-[20rem] lg:h-[10rem] overflow-hidden mr-3">
+        <img src={job.companyImage.url} alt="" className="w-full " />
       </div>
       {/* information */}
       <div className="flex flex-col gap-2 mt-2">
