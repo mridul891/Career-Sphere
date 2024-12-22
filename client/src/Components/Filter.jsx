@@ -4,18 +4,12 @@ import { useState } from "react";
 export function FilterComponent({ onSendData }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const [activeFilters, setActiveFilters] = useState([
-    { type: "experience", value: [] },
-    { type: "domain", value: [] },
-    { type: "jobtype", value: [] },
-  ]);
-
   const filterProducts = [
     {
       id: "jobtype",
       name: "Job Type",
       options: [
-        { value: "FullTime", label: "Full Time" },
+        { value: "Full Time", label: "Full Time" },
         { value: "Internship", label: "Internship" },
         { value: "Remote", label: "Remote" },
       ],
@@ -28,6 +22,8 @@ export function FilterComponent({ onSendData }) {
         { value: "1", label: "1 Year " },
         { value: "2", label: "2 Year" },
         { value: "3", label: "3 Year" },
+        { value: "4", label: "4 Year" },
+
       ],
     },
     {
@@ -42,6 +38,12 @@ export function FilterComponent({ onSendData }) {
     },
   ];
 
+  const [activeFilters, setActiveFilters] = useState([
+    { type: "experience", value: [] },
+    { type: "domain", value: [] },
+    { type: "jobtype", value: [] },
+  ]);
+    
   const handleChange = (e) => {
     if (e.target.checked) {
       activeFilters.map((elem) => {

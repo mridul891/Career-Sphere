@@ -7,7 +7,7 @@ const Details = () => {
   const location = useLocation();
   const { state } = location;
   useEffect(() => {
-    console.log(state);
+
 
     // Convert the timestamp to a Date object
     const date = new Date(state.createdAt);

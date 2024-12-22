@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import JobsComponent from "./JobsComponent";
-import { parse } from "postcss";
 
 const Jobs = ({ data, Activefilter }) => {
+  const [filteredProduct, setFilteredProduct] = useState(data);
+  const newarr = JSON.parse(Activefilter);
   // {
   //   id: "cm4wo16sf190d07pm799ef84w",
   //   title: "Sourcefit is hiring for Front-End Developer | Remote",
@@ -25,32 +26,52 @@ const Jobs = ({ data, Activefilter }) => {
   //   apply: "https://sourcefit.breezy.hr/p/a2f0304ab208-front-end-developer",
   // },
 
-  const filterJobs = (data, Activefilter) => {
-    return data.filter((job) =>
-      Activefilter.every((filter) => {
-        if (filter.value.length === 0) {
-          // Skip this filter type if no values are active
-          return true;
+  const updateFilterProduct = () => {
+    let updatedFilterProduct = data.filter((fp) => {
+      if ( newarr === null ){
+        return true
+      }
+      if (newarr != null) {
+        let values = newarr.find((af) => af.type == "experience").value;
+        if(values.length === 0) {
+          return true
         }
-        // Check if job's property matches any of the values in the filter
-        return filter.value.includes(job[filter.type]);
-      })
-    );
+        return values.includes(fp.experience);
+      }
+    }).filter((fp) => {
+      if ( newarr === null ){
+        return true
+      }
+      if (newarr != null) {
+        let values = newarr.find((af) => af.type == "jobtype").value;
+        if(values.length === 0) {
+          return true
+        }
+        return values.includes(fp.jobType);
+      }
+    }).filter((fp) => {
+      if ( newarr === null ){
+        return true
+      }
+      if (newarr != null) {
+        let values = newarr.find((af) => af.type == "domain").value;
+        if(values.length === 0) {
+          return true
+        }
+        return values.includes(fp.domain);
+      }
+    })
+
+    setFilteredProduct(updatedFilterProduct);
   };
 
   useEffect(() => {
-    // console.log(" filters from jobs ", Activefilter);
-    if (Activefilter != null) {
-      // filterJobs(data, Activefilter);
-      const filteredJobs = filterJobs(data, Activefilter);
-      console.log(filteredJobs)
-    }
+    updateFilterProduct();
   }, [Activefilter]);
-
   return (
     <div className="">
-      {data.map((job) => (
-        <div key={job.id}>
+      {filteredProduct.map((job) => (
+        <div key={job.id} className="">
           <JobsComponent job={job} />
         </div>
       ))}

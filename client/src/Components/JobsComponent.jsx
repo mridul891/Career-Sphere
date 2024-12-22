@@ -17,7 +17,7 @@ const JobsComponent = ({ job }) => {
         <img src={job.companyImage.url} alt="" className="" />
       </div>
       {/* information */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 mt-2">
         <div>
           <h1 className="text-2xl font-semibold">{job.title}</h1>
         </div>
